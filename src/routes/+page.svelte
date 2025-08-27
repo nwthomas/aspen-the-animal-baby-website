@@ -35,9 +35,9 @@
 	<div class="w-full max-w-md mx-auto">
 		<!-- Profile Section -->
 		<div class="text-center mb-8 animate-fade-in">
-			<!-- Avatar Placeholder -->
-			<div class="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-4xl shadow-lg">
-				🐕
+			<!-- Avatar Image -->
+			<div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden shadow-lg">
+				<img src="/images/aspen.jpg" alt="Aspen the Dog" class="w-full h-full object-cover">
 			</div>
 			
 			<h1 class="text-3xl font-bold text-gray-800 mb-2">{profile.name}</h1>
