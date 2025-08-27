@@ -14,7 +14,7 @@
 	// Profile data
 	const profile = {
 		name: 'Aspen',
-		title: 'The Berneses Animal Baby',
+		title: 'The Bernese Animal Baby',
 		descriptions: ['✉️ DMs open for treats and peanut butter', '🎾 Destroyer of tennis balls', '🌊 Loves the ocean', '🎂 May 22, 2023'],
 		avatar: '/aspen-avatar.jpg' // You can add an actual image later
 	};
