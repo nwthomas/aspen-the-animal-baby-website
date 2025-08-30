@@ -1,38 +1,30 @@
 # Aspen the Animal Baby
 
-A website for Aspen the Animal Baby social media profiles
+This repository contains a lightweight website for Aspen the Animal Baby social media profiles. I really just didn't want to pay $15/month for Linktree.
 
-## Creating a project
+![Website example](./assets/website-example.png)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Running the Project
+
+First, run the following command to install dependencies in the project:
 
 ```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+make install
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Next, run the following commands to run the development server locally:
 
 ```sh
-npm run dev
+make run
 
 # or start the server and open the app in a new browser tab
-npm run dev -- --open
+make run-open
 ```
 
-## Building
+## Building the Project
 
-To create a production version of your app:
+To create a production version of the app:
 
 ```sh
-npm run build
+make build
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
