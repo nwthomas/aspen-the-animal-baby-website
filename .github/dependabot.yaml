@@ -1,6 +1,9 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/src"
+  - package-ecosystem: 'npm'
+    directory: '/src'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-minor', 'version-update:semver-patch']
