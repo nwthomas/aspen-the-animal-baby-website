@@ -61,7 +61,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-[#8B8378] md:pt-[50px]">
-	<div class="mx-auto h-screen w-full md:h-[calc(100vh-50px)] md:max-w-[575px] md:px-4">
+	<div class="mx-auto h-screen w-full md:h-[var(--height-screen-minus-header)] md:max-w-[575px] md:px-4">
 		<!-- Card Container -->
 		<div class="flex h-full flex-col overflow-hidden bg-[#9B9589] shadow-2xl md:rounded-t-3xl">
 			<!-- Header Section with Photo -->
@@ -69,6 +69,7 @@
 				<!-- Settings and Share Icons -->
 				<div class="absolute left-4 top-4 z-10">
 					<button
+						aria-label="Settings"
 						class="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow-md transition-all hover:bg-white"
 					>
 						<svg
@@ -95,6 +96,7 @@
 
 				<div class="absolute right-4 top-4 z-10 flex gap-2">
 					<button
+						aria-label="Notifications"
 						class="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow-md transition-all hover:bg-white"
 					>
 						<svg
@@ -112,6 +114,7 @@
 						</svg>
 					</button>
 					<button
+						aria-label="Share"
 						class="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow-md transition-all hover:bg-white"
 					>
 						<svg
