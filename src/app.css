@@ -1,7 +1,31 @@
+/* Geist Font */
+@font-face {
+	font-family: 'Geist';
+	src: url('/fonts/Geist[wght].woff2') format('woff2-variations');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Geist';
+	src: url('/fonts/Geist-Italic[wght].woff2') format('woff2-variations');
+	font-weight: 100 900;
+	font-style: italic;
+	font-display: swap;
+}
+
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
 @theme {
 	--breakpoint-md: 580px;
 	--height-screen-minus-header: calc(100vh - 50px);
+	--font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+	* {
+		font-family: 'Geist', ui-sans-serif, system-ui, sans-serif !important;
+	}
 }

@@ -1,20 +1,9 @@
 <script lang="ts">
-	// Social media links
 	const socialLinks = [
 		{
 			name: 'Instagram',
 			url: 'https://instagram.com/aspentheanimalbaby',
 			icon: 'instagram'
-		},
-		{
-			name: 'TikTok',
-			url: 'https://tiktok.com/@aspentheanimalbaby',
-			icon: 'tiktok'
-		},
-		{
-			name: 'YouTube',
-			url: 'https://youtube.com/@aspentheanimalbaby',
-			icon: 'youtube'
 		},
 		{
 			name: 'Email',
@@ -23,7 +12,6 @@
 		}
 	];
 
-	// Main content links for Aspen
 	const links = [
 		{
 			title: 'My Favorite Toys',
@@ -47,9 +35,8 @@
 		}
 	];
 
-	// Profile data
 	const profile = {
-		name: '@aspentheanimalbaby',
+		name: '@aspen.the.animal.baby',
 		tagline: 'adventures • treats • tennis balls',
 		avatar: '/images/aspen.jpg'
 	};
@@ -62,11 +49,8 @@
 
 <div class="min-h-screen bg-[#8B8378] md:pt-[50px]">
 	<div class="mx-auto h-screen w-full md:h-[var(--height-screen-minus-header)] md:max-w-[575px] md:px-4">
-		<!-- Card Container -->
 		<div class="flex h-full flex-col overflow-hidden bg-[#9B9589] shadow-2xl md:rounded-t-3xl">
-			<!-- Header Section with Photo -->
 			<div class="relative">
-				<!-- Settings and Share Icons -->
 				<div class="absolute left-4 top-4 z-10">
 					<button
 						aria-label="Settings"
@@ -93,7 +77,6 @@
 						</svg>
 					</button>
 				</div>
-
 				<div class="absolute right-4 top-4 z-10 flex gap-2">
 					<button
 						aria-label="Notifications"
@@ -132,8 +115,6 @@
 						</svg>
 					</button>
 				</div>
-
-				<!-- Profile Photo -->
 				<div class="h-80 overflow-hidden bg-gradient-to-b from-gray-300 to-gray-400">
 					<img
 						src={profile.avatar}
@@ -141,8 +122,6 @@
 						class="h-full w-full object-cover object-center"
 					/>
 				</div>
-
-				<!-- Profile Info Overlay -->
 				<div
 					class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6 text-white"
 				>
@@ -150,8 +129,6 @@
 					<p class="text-sm">{profile.tagline}</p>
 				</div>
 			</div>
-
-			<!-- Social Media Icons -->
 			<div class="flex justify-center gap-4 bg-[#9B9589] px-6 py-6">
 				{#each socialLinks as social (social.url)}
 					<a
@@ -192,8 +169,6 @@
 					</a>
 				{/each}
 			</div>
-
-			<!-- Links Section -->
 			<div class="flex-1 space-y-3 overflow-y-auto bg-[#9B9589] px-6 py-6">
 				{#each links as link, index (link.url)}
 					<a
@@ -225,8 +200,6 @@
 					</a>
 				{/each}
 			</div>
-
-			<!-- Footer -->
 			<div class="bg-[#9B9589] px-6 py-4 text-center">
 				<p class="text-sm text-gray-800">Made with ❤️ for animal lovers everywhere</p>
 			</div>
