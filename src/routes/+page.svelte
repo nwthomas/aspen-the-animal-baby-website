@@ -1,10 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	function resolve(url: string): string {
-		return url;
-	}
-
 	// Social media links for Aspen
 	const links = [
 		{
@@ -64,7 +60,7 @@
 		<div class="space-y-4">
 			{#each links as link, index (link.url)}
 				<a
-					href={resolve(link.url)}
+					href={link.url}
 					target="_blank"
 					rel="noopener noreferrer"
 					class="group block"
