@@ -43,16 +43,17 @@
 </svelte:head>
 
 <!-- Page Container -->
-<div class="min-h-screen bg-[#E0E0E0] md:pt-[50px]">
+<div class="min-h-screen bg-[var(--color-background-primary)] md:pt-[50px]">
 	<!-- Card Container -->
 	<div class="mx-auto h-screen w-full md:h-[var(--height-screen-minus-header)] md:max-w-[575px] md:px-4">
-		<div class="flex h-full flex-col overflow-hidden bg-[#F8F8F8] shadow-2xl md:rounded-t-3xl">
-			<!-- Photo / Top of Card -->
+		<div class="flex h-full flex-col overflow-hidden bg-[var(--color-background-secondary)] shadow-2xl md:rounded-t-3xl">
+			<!-- Top of Card -->
 			<div class="relative">
+				<!-- Settings Button -->
 				<div class="absolute left-4 top-4 z-10">
 					<button
 						aria-label="Settings"
-						class="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow-md transition-all hover:bg-white"
+						class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-background-secondary)] shadow-md transition-all cursor-pointer"
 					>
 						<svg
 							class="h-5 w-5 text-gray-700"
@@ -75,10 +76,11 @@
 						</svg>
 					</button>
 				</div>
+				<!-- Notifications and Share Buttons -->
 				<div class="absolute right-4 top-4 z-10 flex gap-2">
 					<button
 						aria-label="Notifications"
-						class="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow-md transition-all hover:bg-white"
+						class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-background-primary)] shadow-md transition-all cursor-pointer"
 					>
 						<svg
 							class="h-5 w-5 text-gray-700"
@@ -96,7 +98,7 @@
 					</button>
 					<button
 						aria-label="Share"
-						class="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow-md transition-all hover:bg-white"
+						class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-background-primary)] shadow-md transition-all cursor-pointer"
 					>
 						<svg
 							class="h-5 w-5 text-gray-700"
@@ -113,28 +115,30 @@
 						</svg>
 					</button>
 				</div>
-				<div class="h-80 overflow-hidden bg-gradient-to-b from-gray-300 to-gray-400">
+				<!-- Photo -->
+				<div class="h-80 overflow-hidden">
 					<img
 						src={profile.avatar}
 						alt="Aspen the Dog"
 						class="h-full w-full object-cover object-center"
 					/>
 				</div>
+				<!-- Profile Name and Tagline-->
 				<div
-					class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6 text-white"
+					class="absolute bottom-0 left-0 right-0 p-6 text-white"
 				>
 					<h1 class="mb-1 text-2xl font-bold">{profile.name}</h1>
 					<p class="text-sm">{profile.tagline}</p>
 				</div>
 			</div>
 			<!-- Social Links -->
-			<div class="flex justify-center gap-2 px-6 py-6">
+			<div class="flex justify-center gap-2 px-6 pt-6">
 				{#each socialLinks as social (social.url)}
 					<a
 						href={social.url}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="flex h-12 w-12 items-center justify-center text-[var(--color-primary)] transition-all"
+						class="flex h-12 w-12 items-center justify-center text-[var(--color-text-primary)] transition-all hover:opacity-70"
 						aria-label={social.name}
 					>
 						{#if social.icon === 'instagram'}
@@ -178,13 +182,13 @@
 						class="group block"
 					>
 						<div
-							class="flex items-center justify-between px-5 py-4 transition-all duration-200 hover:shadow-lg border-2 border-solid border-[var(--color-primary)]"
+							class="flex items-center justify-between px-5 py-4 transition-all duration-200 hover:opacity-70 border-3 border-solid border-[var(--color-text-primary)]"
 						>
-							<h3 class="font-medium text-[var(--color-primary)] transition-colors">
+							<h3 class="font-medium text-[var(--color-text-primary)] transition-colors">
 								{link.title}
 							</h3>
 							<svg
-								class="h-4 w-4 text-[var(--color-primary)] transition-colors"
+								class="h-4 w-4 text-[var(--color-text-primary)] transition-colors"
 								fill="none"
 								stroke="currentColor"
 								viewBox="0 0 24 24"

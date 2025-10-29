@@ -22,7 +22,10 @@
 	--breakpoint-md: 580px;
 	--height-screen-minus-header: calc(100vh - 50px);
 	--font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
-	--color-primary: #2D6EEE;
+	--color-text-primary: #2D6EEE;
+	--color-text-secondary: #333333;
+	--color-background-primary: #E0E0E0;
+	--color-background-secondary: #F8F8F8;
 }
 
 @layer base {
