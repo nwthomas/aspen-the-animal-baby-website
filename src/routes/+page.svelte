@@ -1,9 +1,16 @@
 <script lang="ts">
+	import aspenProfilePicture from '$lib/assets/aspen.jpg';
+
 	const socialLinks = [
 		{
 			name: 'Instagram',
-			url: 'https://instagram.com/aspentheanimalbaby',
+			url: 'https://instagram.com/aspen.the.animal.baby',
 			icon: 'instagram'
+		},
+		{
+			name: 'TikTok',
+			url: 'https://tiktok.com/@aspen.the.animal.baby',
+			icon: 'tiktok'
 		},
 		{
 			name: 'Email',
@@ -12,7 +19,7 @@
 		}
 	];
 
-	const links = [
+	const businessLinks = [
 		{
 			title: 'My Favorite Toys',
 			url: 'https://www.amazon.com/shop/aspentheanimalbaby'
@@ -21,35 +28,26 @@
 			title: 'Best Dog Treats',
 			url: 'https://www.amazon.com/shop/aspentheanimalbaby/treats'
 		},
-		{
-			title: 'Beach Adventures',
-			url: 'https://instagram.com/aspentheanimalbaby'
-		},
-		{
-			title: 'Training Tips',
-			url: 'https://youtube.com/@aspentheanimalbaby'
-		},
-		{
-			title: 'Aspen\'s Gear',
-			url: 'https://www.amazon.com/shop/aspentheanimalbaby/gear'
-		}
 	];
 
 	const profile = {
 		name: '@aspen.the.animal.baby',
-		tagline: 'adventures • treats • tennis balls',
-		avatar: '/images/aspen.jpg'
+		tagline: 'adventures 🐕 • treats 🍖 • tennis balls 🎾',
+		avatar: aspenProfilePicture,
 	};
 </script>
 
 <svelte:head>
-	<title>Aspen the Animal Baby - Links</title>
+	<title>Aspen the Animal Baby | Instagram, TikTok | Links</title>
 	<meta name="description" content="Follow Aspen's adventures across all social media platforms" />
 </svelte:head>
 
-<div class="min-h-screen bg-[#8B8378] md:pt-[50px]">
+<!-- Page Container -->
+<div class="min-h-screen bg-[#E0E0E0] md:pt-[50px]">
+	<!-- Card Container -->
 	<div class="mx-auto h-screen w-full md:h-[var(--height-screen-minus-header)] md:max-w-[575px] md:px-4">
-		<div class="flex h-full flex-col overflow-hidden bg-[#9B9589] shadow-2xl md:rounded-t-3xl">
+		<div class="flex h-full flex-col overflow-hidden bg-[#F8F8F8] shadow-2xl md:rounded-t-3xl">
+			<!-- Photo / Top of Card -->
 			<div class="relative">
 				<div class="absolute left-4 top-4 z-10">
 					<button
@@ -129,13 +127,14 @@
 					<p class="text-sm">{profile.tagline}</p>
 				</div>
 			</div>
-			<div class="flex justify-center gap-4 bg-[#9B9589] px-6 py-6">
+			<!-- Social Links -->
+			<div class="flex justify-center gap-2 px-6 py-6">
 				{#each socialLinks as social (social.url)}
 					<a
 						href={social.url}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-md transition-all hover:bg-white hover:shadow-lg"
+						class="flex h-12 w-12 items-center justify-center text-[var(--color-primary)] transition-all"
 						aria-label={social.name}
 					>
 						{#if social.icon === 'instagram'}
@@ -169,8 +168,9 @@
 					</a>
 				{/each}
 			</div>
-			<div class="flex-1 space-y-3 overflow-y-auto bg-[#9B9589] px-6 py-6">
-				{#each links as link, index (link.url)}
+			<!-- Business Links -->
+			<div class="flex-1 space-y-3 overflow-y-auto px-6 py-6">
+				{#each businessLinks as link (link.url)}
 					<a
 						href={link.url}
 						target="_blank"
@@ -178,13 +178,13 @@
 						class="group block"
 					>
 						<div
-							class="flex items-center justify-between rounded-xl bg-white px-5 py-4 shadow-md transition-all duration-200 hover:shadow-lg"
+							class="flex items-center justify-between px-5 py-4 transition-all duration-200 hover:shadow-lg border-2 border-solid border-[var(--color-primary)]"
 						>
-							<h3 class="font-medium text-gray-800 transition-colors group-hover:text-gray-600">
+							<h3 class="font-medium text-[var(--color-primary)] transition-colors">
 								{link.title}
 							</h3>
 							<svg
-								class="h-4 w-4 text-gray-400 transition-colors group-hover:text-gray-600"
+								class="h-4 w-4 text-[var(--color-primary)] transition-colors"
 								fill="none"
 								stroke="currentColor"
 								viewBox="0 0 24 24"
@@ -200,8 +200,8 @@
 					</a>
 				{/each}
 			</div>
-			<div class="bg-[#9B9589] px-6 py-4 text-center">
-				<p class="text-sm text-gray-800">Made with ❤️ for animal lovers everywhere</p>
+			<div class="px-6 py-4 text-center">
+				<p class="text-sm text-gray-800">Made with ❤️ for dog lovers everywhere</p>
 			</div>
 		</div>
 	</div>

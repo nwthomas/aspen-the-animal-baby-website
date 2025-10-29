@@ -22,6 +22,7 @@
 	--breakpoint-md: 580px;
 	--height-screen-minus-header: calc(100vh - 50px);
 	--font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
+	--color-primary: #2D6EEE;
 }
 
 @layer base {
