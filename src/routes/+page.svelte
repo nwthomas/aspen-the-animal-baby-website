@@ -5,62 +5,66 @@
 		{
 			name: 'Instagram',
 			url: 'https://instagram.com/aspen.the.animal.baby',
-			icon: 'instagram'
+			icon: 'instagram',
 		},
 		{
 			name: 'TikTok',
 			url: 'https://www.tiktok.com/@aspen.the.animal.baby',
-			icon: 'tiktok'
+			icon: 'tiktok',
 		},
 		{
 			name: 'Email',
 			url: 'mailto:hello@aspentheanimalbaby.com',
-			icon: 'email'
-		}
+			icon: 'email',
+		},
 	];
 
 	const affiliateLinks = [
 		{
 			title: 'Best Treats',
-			url: 'https://amzn.to/3WvD66j'
+			url: 'https://amzn.to/3WvD66j',
 		},
 		{
 			title: 'Delicious Bonez',
-			url: 'https://amzn.to/3Wv8QIM'
+			url: 'https://amzn.to/3Wv8QIM',
 		},
 		{
 			title: 'Tasty Biscuit',
-			url: 'https://amzn.to/47OoXYg'
+			url: 'https://amzn.to/47OoXYg',
+		},
+		{
+			title: 'Please Peanut Butter',
+			url: 'https://amzn.to/4nxzuMm',
 		},
 		{
 			title: 'Good Fetch',
-			url: 'https://amzn.to/47isqhC'
+			url: 'https://amzn.to/47isqhC',
 		},
 		{
 			title: 'Tuff Chewtoy',
-			url: 'https://amzn.to/3Wve6fv'
+			url: 'https://amzn.to/3Wve6fv',
 		},
 		{
 			title: 'Perfect Poops',
-			url: 'https://amzn.to/4hJFrEv'
+			url: 'https://amzn.to/4hJFrEv',
 		},
 		{
 			title: 'Eww Vitamin',
-			url: 'https://amzn.to/4ntfgmE'
-		}
+			url: 'https://amzn.to/4ntfgmE',
+		},
 	];
 
 	const profile = {
 		meta: {
 			description: "Follow Aspen's adventures across all social media platforms",
-			title: 'Aspen the Animal Baby | Instagram, Email | Links'
+			title: 'Aspen the Animal Baby | Instagram, Email | Links',
 		},
 		content: {
 			avatar: aspenProfilePicture,
 			footer: 'Made with ❤️ for dogs everywhere',
 			name: '@aspen.the.animal.baby',
-			tagline: 'Adventures 🐕 • Treats 🍖 • Tennis Balls 🎾'
-		}
+			tagline: 'Adventures 🐕 • Treats 🍖 • Tennis Balls 🎾',
+		},
 	};
 
 	let showTooltip = false;
