@@ -23,15 +23,31 @@
 	const businessLinks = [
 		{
 			title: 'Delicious Treat',
-			url: 'https://amzn.to/3WvD66j'
+			url: 'https://amzn.to/3WvD66j',
+		},
+		{
+			title: 'Excellent Bone',
+			url: 'https://amzn.to/3Wv8QIM',
+		},
+		{
+			title: "Tasty Biscuit",
+			url: 'https://amzn.to/47OoXYg',
 		},
 		{
 			title: 'Good Fetch',
-			url: 'https://amzn.to/4hw8OtO'
+			url: 'https://amzn.to/47isqhC',
 		},
 		{
-			title: 'Excellent Snackz',
-			url: 'https://amzn.to/3Wv8QIM'
+			title: 'Tuff Chewtoy',
+			url: 'https://amzn.to/3Wve6fv',
+		},
+		{
+			title: 'Perfect Poops',
+			url: 'https://amzn.to/4hJFrEv',
+		},
+		{
+			title: 'Eww Vitamins',
+			url: 'https://amzn.to/4ntfgmE',
 		},
 	];
 
@@ -54,8 +70,8 @@
 <!-- Page Container -->
 <div class="min-h-screen bg-[var(--color-background-primary)]">
 	<!-- Card Container -->
-	<div class="mx-auto h-screen w-full md:max-w-[575px] md:px-4 md:pt-[50px]">
-		<div class="flex h-full flex-col overflow-hidden bg-[var(--color-background-secondary)] shadow-2xl md:rounded-t-3xl">
+	<div class="mx-auto min-h-screen w-full md:max-w-[575px] md:px-4 md:pt-[50px]">
+		<div class="flex min-h-screen md:min-h-[calc(100vh-50px)] flex-col bg-[var(--color-background-secondary)] shadow-2xl md:rounded-t-3xl">
 			<!-- Top of Card -->
 			<div class="relative">
 				<!-- Share Button -->
@@ -133,7 +149,7 @@
 				{/each}
 			</div>
 			<!-- Business Links -->
-			<div class="flex-1 space-y-3 overflow-y-auto px-6 py-6">
+			<div class="flex-1 space-y-3 px-6 py-6">
 				{#each businessLinks as link (link.url)}
 					<a
 						href={link.url}
@@ -165,8 +181,8 @@
 					</a>
 				{/each}
 			</div>
-			<div class="px-6 py-4 text-center">
-				<p class="text-sm text-gray-800">Made with ❤️ for dog lovers everywhere</p>
+			<div class="px-[6px] pb-[25px] pt-[5px] text-center">
+				<p class="text-sm text-gray-800 text-center">Made with ❤️ for dog lovers everywhere</p>
 			</div>
 		</div>
 	</div>
