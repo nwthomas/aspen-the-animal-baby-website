@@ -102,9 +102,11 @@
 <!-- Page Container -->
 <div class="min-h-screen bg-[var(--color-background-primary)]">
 	<!-- Card Container -->
-	<div class="mx-auto w-full md:max-w-[575px] md:px-4 md:pt-[30px]">
+	<div
+		class="mx-auto min-h-screen w-full md:max-w-[var(--breakpoint-md)] md:px-4 md:pt-[var(--card-gap-top)]"
+	>
 		<div
-			class="flex flex-col bg-[var(--color-background-secondary)] shadow-2xl md:min-h-[calc(100vh-30px)] md:rounded-t-3xl"
+			class="flex min-h-screen flex-col bg-[var(--color-background-secondary)] shadow-2xl md:min-h-[calc(100vh-var(--card-gap-top))] md:rounded-t-3xl"
 		>
 			<!-- Top of Card -->
 			<div class="relative">
@@ -121,7 +123,7 @@
 					<button
 						onclick={copyToClipboard}
 						aria-label="Copy link to clipboard"
-						class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[var(--color-background-primary)] shadow-md transition-all hover:opacity-70"
+						class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[var(--color-background-primary)] shadow-md transition-all hover:opacity-[var(--hover-opacity)]"
 					>
 						<svg
 							class="h-5 w-5 text-gray-700"
@@ -160,7 +162,7 @@
 						href={socialLink.url}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="flex h-12 w-12 items-center justify-center text-[var(--color-text-primary)] transition-all hover:opacity-70"
+						class="flex h-12 w-12 items-center justify-center text-[var(--color-text-primary)] transition-all hover:opacity-[var(--hover-opacity)]"
 						aria-label={socialLink.name}
 					>
 						{#if socialLink.icon === 'instagram'}
@@ -206,7 +208,7 @@
 						aria-label={affiliateLink.title}
 					>
 						<div
-							class="flex items-center justify-between border-3 border-solid border-[var(--color-text-primary)] px-5 py-4 transition-all duration-200 hover:opacity-70"
+							class="flex items-center justify-between border-3 border-solid border-[var(--color-text-primary)] px-5 py-4 transition-all duration-200 hover:opacity-[var(--hover-opacity)]"
 						>
 							<h3 class="font-medium text-[var(--color-text-primary)] transition-colors">
 								{affiliateLink.title}
