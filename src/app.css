@@ -1,6 +1,14 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
+@font-face {
+	font-family: 'Special Gothic Expanded';
+	src: url('./lib/fonts/SpecialGothicExpandedOne-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
 @theme {
 	--breakpoint-md: 580px;
 	--color-text-primary: #2D6EEE;
@@ -11,7 +19,7 @@
 
 @layer base {
 	* {
-		font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+		font-family: 'Special Gothic Expanded', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
 	}
 	body {
 		background-color: var(--color-background-primary);
