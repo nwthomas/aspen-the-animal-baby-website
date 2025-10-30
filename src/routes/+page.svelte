@@ -1,5 +1,7 @@
 <script lang="ts">
 	import aspenProfilePicture from '$lib/assets/aspen.jpg';
+	import socialCard from '$lib/assets/social-card.png';
+	import QRCode from '$lib/components/QRCode.svelte';
 
 	const socialLinks = [
 		{
@@ -80,6 +82,21 @@
 <svelte:head>
 	<title>{profile.meta.title}</title>
 	<meta name="description" content={profile.meta.description} />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content={profile.meta.title} />
+	<meta property="og:description" content={profile.meta.description} />
+	<meta property="og:image" content={socialCard} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:type" content="image/png" />
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={profile.meta.title} />
+	<meta name="twitter:description" content={profile.meta.description} />
+	<meta name="twitter:image" content={socialCard} />
 </svelte:head>
 
 <!-- Page Container -->
@@ -219,3 +236,5 @@
 		</div>
 	</div>
 </div>
+
+<QRCode />

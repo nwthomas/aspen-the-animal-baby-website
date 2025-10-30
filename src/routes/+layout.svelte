@@ -1,7 +1,6 @@
 <script lang="ts">
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.ico';
-	import QRCode from '$lib/components/QRCode.svelte';
 </script>
 
 <svelte:head>
@@ -9,5 +8,3 @@
 </svelte:head>
 
 <slot />
-
-<QRCode />
