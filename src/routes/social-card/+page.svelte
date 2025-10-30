@@ -18,17 +18,17 @@
 		<img
 			src={aspenProfilePicture}
 			alt="Aspen the Dog"
-			class="h-[350px] w-[350px] rounded-full object-cover"
+			class="h-[280px] w-[280px] rounded-full object-cover"
 		/>
 
 		<!-- Handle -->
-		<h1 class="mt-8 text-7xl font-bold text-[var(--color-text-primary)]">@aspen.the.animal.baby</h1>
+		<h1 class="mt-8 text-6xl font-bold text-[var(--color-text-primary)]">@aspen.the.animal.baby</h1>
 
 		<!-- URL with asterisk -->
 		<div class="mt-6 flex items-center gap-3">
 			<!-- Asterisk SVG -->
 			<svg
-				class="h-12 w-12 text-[var(--color-text-primary)]"
+				class="h-10 w-10 text-[var(--color-text-primary)]"
 				fill="currentColor"
 				viewBox="0 0 24 24"
 			>
@@ -36,7 +36,7 @@
 			</svg>
 
 			<!-- URL -->
-			<p class="text-5xl text-[var(--color-text-secondary)]">/aspentheanimalbaby</p>
+			<p class="text-4xl text-[var(--color-text-secondary)]">/aspentheanimalbaby</p>
 		</div>
 	</div>
 </div>
