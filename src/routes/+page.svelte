@@ -22,45 +22,45 @@
 	const affiliateLinks = [
 		{
 			title: 'Best Treats',
-			url: 'https://amzn.to/3WvD66j',
+			url: 'https://amzn.to/3WvD66j'
 		},
 		{
 			title: 'Delicious Bonez',
-			url: 'https://amzn.to/3Wv8QIM',
+			url: 'https://amzn.to/3Wv8QIM'
 		},
 		{
-			title: "Tasty Biscuit",
-			url: 'https://amzn.to/47OoXYg',
+			title: 'Tasty Biscuit',
+			url: 'https://amzn.to/47OoXYg'
 		},
 		{
 			title: 'Good Fetch',
-			url: 'https://amzn.to/47isqhC',
+			url: 'https://amzn.to/47isqhC'
 		},
 		{
 			title: 'Tuff Chewtoy',
-			url: 'https://amzn.to/3Wve6fv',
+			url: 'https://amzn.to/3Wve6fv'
 		},
 		{
 			title: 'Perfect Poops',
-			url: 'https://amzn.to/4hJFrEv',
+			url: 'https://amzn.to/4hJFrEv'
 		},
 		{
 			title: 'Eww Vitamin',
-			url: 'https://amzn.to/4ntfgmE',
-		},
+			url: 'https://amzn.to/4ntfgmE'
+		}
 	];
 
 	const profile = {
-		meta : {
+		meta: {
 			description: "Follow Aspen's adventures across all social media platforms",
-			title: 'Aspen the Animal Baby | Instagram, Email | Links',
+			title: 'Aspen the Animal Baby | Instagram, Email | Links'
 		},
 		content: {
 			avatar: aspenProfilePicture,
 			footer: 'Made with ❤️ for dogs everywhere',
 			name: '@aspen.the.animal.baby',
-			tagline: 'Adventures 🐕 • Treats 🍖 • Tennis Balls 🎾',
-		},
+			tagline: 'Adventures 🐕 • Treats 🍖 • Tennis Balls 🎾'
+		}
 	};
 
 	let showTooltip = false;
@@ -80,21 +80,19 @@
 
 <!-- Page Container -->
 <div class="min-h-screen bg-[var(--color-background-primary)]">
-
 	<!-- Card Container -->
 	<div class="mx-auto min-h-screen w-full md:max-w-[575px] md:px-4 md:pt-[30px]">
-		<div class="flex min-h-screen md:min-h-[calc(100vh-50px)] flex-col bg-[var(--color-background-secondary)] shadow-2xl md:rounded-t-3xl">
-
+		<div
+			class="flex min-h-screen flex-col bg-[var(--color-background-secondary)] shadow-2xl md:min-h-[calc(100vh-50px)] md:rounded-t-3xl"
+		>
 			<!-- Top of Card -->
 			<div class="relative">
-
 				<!-- Share Button -->
-				<div class="absolute right-6 top-6 z-10 flex items-center gap-2">
-
+				<div class="absolute top-6 right-6 z-10 flex items-center gap-2">
 					<!-- Tooltip -->
 					{#if showTooltip}
 						<div
-							class="px-2 py-1 bg-[var(--color-background-primary)] text-[var(--color-text-secondary)] text-sm rounded-md shadow-md whitespace-nowrap transition-opacity"
+							class="rounded-md bg-[var(--color-background-primary)] px-2 py-1 text-sm whitespace-nowrap text-[var(--color-text-secondary)] shadow-md transition-opacity"
 						>
 							Copied to Clipboard
 						</div>
@@ -102,7 +100,7 @@
 					<button
 						onclick={copyToClipboard}
 						aria-label="Copy link to clipboard"
-						class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-background-primary)] shadow-md transition-all cursor-pointer hover:opacity-70"
+						class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[var(--color-background-primary)] shadow-md transition-all hover:opacity-70"
 					>
 						<svg
 							class="h-5 w-5 text-gray-700"
@@ -127,7 +125,9 @@
 						alt="Aspen the Dog"
 						class="h-32 w-32 rounded-full object-cover shadow-lg"
 					/>
-					<h1 class="mt-4 text-2xl font-bold text-[var(--color-text-primary)]">{profile.content.name}</h1>
+					<h1 class="mt-4 text-2xl font-bold text-[var(--color-text-primary)]">
+						{profile.content.name}
+					</h1>
 					<p class="mt-1 text-sm text-[var(--color-text-secondary)]">{profile.content.tagline}</p>
 				</div>
 			</div>
@@ -185,7 +185,7 @@
 						aria-label={affiliateLink.title}
 					>
 						<div
-							class="flex items-center justify-between px-5 py-4 transition-all duration-200 hover:opacity-70 border-3 border-solid border-[var(--color-text-primary)]"
+							class="flex items-center justify-between border-3 border-solid border-[var(--color-text-primary)] px-5 py-4 transition-all duration-200 hover:opacity-70"
 						>
 							<h3 class="font-medium text-[var(--color-text-primary)] transition-colors">
 								{affiliateLink.title}
@@ -209,8 +209,8 @@
 			</div>
 
 			<!-- Footer -->
-			<div class="px-[6px] pb-[25px] pt-[5px] text-center">
-				<p class="text-sm text-gray-800 text-center">{profile.content.footer}</p>
+			<div class="px-[6px] pt-[5px] pb-[25px] text-center">
+				<p class="text-center text-sm text-gray-800">{profile.content.footer}</p>
 			</div>
 		</div>
 	</div>
