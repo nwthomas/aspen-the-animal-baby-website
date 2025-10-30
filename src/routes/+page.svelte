@@ -53,12 +53,11 @@
 
 	const profile = {
 		name: '@aspen.the.animal.baby',
-		tagline: 'adventures 🐕 • treats 🍖 • tennis balls 🎾',
+		tagline: 'Adventures 🐕 • Treats 🍖 • Tennis Balls 🎾',
 		avatar: aspenProfilePicture,
 	};
 
 	let showTooltip = false;
-
 	function copyToClipboard() {
 		navigator.clipboard.writeText(window.location.href);
 		showTooltip = true;
@@ -76,15 +75,16 @@
 <!-- Page Container -->
 <div class="min-h-screen bg-[var(--color-background-primary)]">
 	<!-- Card Container -->
-	<div class="mx-auto min-h-screen w-full md:max-w-[575px] md:px-4 md:pt-[50px]">
+	<div class="mx-auto min-h-screen w-full md:max-w-[575px] md:px-4 md:pt-[30px]">
 		<div class="flex min-h-screen md:min-h-[calc(100vh-50px)] flex-col bg-[var(--color-background-secondary)] shadow-2xl md:rounded-t-3xl">
 			<!-- Top of Card -->
 			<div class="relative">
 				<!-- Share Button -->
 				<div class="absolute right-6 top-6 z-10 flex items-center gap-2">
+					<!-- Tooltip -->
 					{#if showTooltip}
 						<div
-							class="px-3 py-2 bg-[var(--color-background-primary)] text-[var(--color-text-secondary)] text-sm rounded-md shadow-lg whitespace-nowrap transition-opacity"
+							class="px-2 py-1 bg-[var(--color-background-primary)] text-[var(--color-text-secondary)] text-sm rounded-md shadow-md whitespace-nowrap transition-opacity"
 						>
 							Copied to Clipboard
 						</div>
