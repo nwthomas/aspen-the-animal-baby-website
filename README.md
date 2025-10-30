@@ -1,6 +1,10 @@
-# Aspen the Animal Baby
+# Aspen the Animal Baby Website
 
-This repository contains a lightweight website for Aspen the Animal Baby social media profiles. I really just didn't want to pay $15/month for Linktree.
+This repository contains a lightweight website for Aspen the Animal Baby social media profiles for my dog Aspen.
+
+I guess I just really didn't want to pay $15/month for Linktree.
+
+## Example
 
 ![Website example](./assets/website-example.png)
 
