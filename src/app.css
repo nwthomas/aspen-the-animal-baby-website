@@ -3,10 +3,10 @@
 
 @font-face {
 	font-family: 'Special Gothic Expanded';
-	src: url('./lib/fonts/SpecialGothicExpandedOne-Regular.ttf') format('truetype');
+	src: url('/fonts/SpecialGothicExpandedOne-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
-	font-display: swap;
+	font-display: block;
 }
 
 @theme {
