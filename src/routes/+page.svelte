@@ -1,5 +1,5 @@
 <script lang="ts">
-	import aspenProfilePicture from '$lib/assets/aspen-beach.jpg';
+	import aspenProfilePicture from '$lib/assets/aspen.jpg';
 
 	const socialLinks = [
 		{
@@ -7,11 +7,12 @@
 			url: 'https://instagram.com/aspen.the.animal.baby',
 			icon: 'instagram'
 		},
-		{
-			name: 'TikTok',
-			url: 'https://tiktok.com/@aspen.the.animal.baby',
-			icon: 'tiktok'
-		},
+		// TODO: Add TikTok back in when I've created it
+		// {
+		// 	name: 'TikTok',
+		// 	url: 'https://tiktok.com/@aspen.the.animal.baby',
+		// 	icon: 'tiktok'
+		// },
 		{
 			name: 'Email',
 			url: 'mailto:hello@aspentheanimalbaby.com',
@@ -21,15 +22,15 @@
 
 	const businessLinks = [
 		{
-			title: 'Favorite Treat',
+			title: 'Delicious Treat',
 			url: 'https://amzn.to/3WvD66j'
 		},
 		{
-			title: 'Best Ball',
+			title: 'Good Fetch',
 			url: 'https://amzn.to/4hw8OtO'
 		},
 		{
-			title: 'Delicious Snack',
+			title: 'Excellent Snackz',
 			url: 'https://amzn.to/3Wv8QIM'
 		},
 	];
@@ -39,25 +40,30 @@
 		tagline: 'adventures 🐕 • treats 🍖 • tennis balls 🎾',
 		avatar: aspenProfilePicture,
 	};
+
+	function copyToClipboard() {
+		navigator.clipboard.writeText(window.location.href);
+	}
 </script>
 
 <svelte:head>
-	<title>Aspen the Animal Baby | Instagram, TikTok | Links</title>
+	<title>Aspen the Animal Baby | Instagram, Email | Links</title>
 	<meta name="description" content="Follow Aspen's adventures across all social media platforms" />
 </svelte:head>
 
 <!-- Page Container -->
-<div class="min-h-screen bg-[var(--color-background-primary)] md:pt-[50px]">
+<div class="min-h-screen bg-[var(--color-background-primary)]">
 	<!-- Card Container -->
-	<div class="mx-auto h-screen w-full md:h-[var(--height-screen-minus-header)] md:max-w-[575px] md:px-4">
+	<div class="mx-auto h-screen w-full md:max-w-[575px] md:px-4 md:pt-[50px]">
 		<div class="flex h-full flex-col overflow-hidden bg-[var(--color-background-secondary)] shadow-2xl md:rounded-t-3xl">
 			<!-- Top of Card -->
 			<div class="relative">
-				<!-- Settings Button -->
-				<div class="absolute left-4 top-4 z-10">
+				<!-- Share Button -->
+				<div class="absolute right-6 top-6 z-10 flex gap-2">
 					<button
-						aria-label="Settings"
-						class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-background-secondary)] shadow-md transition-all cursor-pointer"
+						onclick={copyToClipboard}
+						aria-label="Copy link to clipboard"
+						class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-background-primary)] shadow-md transition-all cursor-pointer hover:opacity-70"
 					>
 						<svg
 							class="h-5 w-5 text-gray-700"
@@ -69,73 +75,24 @@
 								stroke-linecap="round"
 								stroke-linejoin="round"
 								stroke-width="2"
-								d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-							></path>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+								d="M4 12v7a3 3 0 003 3h10a3 3 0 003-3v-7M12 3v13m0-13l-4 4m4-4l4 4"
 							></path>
 						</svg>
 					</button>
 				</div>
-				<!-- Notifications and Share Buttons -->
-				<div class="absolute right-4 top-4 z-10 flex gap-2">
-					<button
-						aria-label="Notifications"
-						class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-background-primary)] shadow-md transition-all cursor-pointer"
-					>
-						<svg
-							class="h-5 w-5 text-gray-700"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-							></path>
-						</svg>
-					</button>
-					<button
-						aria-label="Share"
-						class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-background-primary)] shadow-md transition-all cursor-pointer"
-					>
-						<svg
-							class="h-5 w-5 text-gray-700"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
-							></path>
-						</svg>
-					</button>
-				</div>
-				<!-- Photo -->
-				<div class="relative h-140 overflow-hidden">
+				<!-- Profile Photo and Info -->
+				<div class="flex flex-col items-center pt-20 pb-4">
 					<img
 						src={profile.avatar}
 						alt="Aspen the Dog"
-						class="absolute w-full object-cover bottom-2"
+						class="h-32 w-32 rounded-full object-cover shadow-lg"
 					/>
-					<!-- <div class="absolute h-30 bottom-0 left-0 right-0 bg-[linear-gradient(0deg,_var(--color-background-secondary)_10%,_transparent_80%)]"></div> -->
-					<div class="absolute bottom-0 left-0 right-0 px-6 pb-6 pt-16 text-white text-center">
-						<h1 class="mb-1 text-2xl font-bold">{profile.name}</h1>
-						<p class="text-sm">{profile.tagline}</p>
-					</div>
+					<h1 class="mt-4 text-2xl font-bold text-[var(--color-text-primary)]">{profile.name}</h1>
+					<p class="mt-1 text-sm text-[var(--color-text-secondary)]">{profile.tagline}</p>
 				</div>
-				<!-- Profile Name and Tagline-->
 			</div>
 			<!-- Social Links -->
-			<div class="flex justify-center gap-2 px-6 pt-6">
+			<div class="flex justify-center gap-2 px-6 pt-1">
 				{#each socialLinks as social (social.url)}
 					<a
 						href={social.url}
@@ -183,6 +140,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						class="group block"
+						aria-label={link.title}
 					>
 						<div
 							class="flex items-center justify-between px-5 py-4 transition-all duration-200 hover:opacity-70 border-3 border-solid border-[var(--color-text-primary)]"
