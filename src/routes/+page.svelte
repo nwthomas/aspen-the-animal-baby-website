@@ -1,5 +1,5 @@
 <script lang="ts">
-	import aspenProfilePicture from '$lib/assets/aspen.jpg';
+	import aspenProfilePicture from '$lib/assets/aspen-beach.jpg';
 
 	const socialLinks = [
 		{
@@ -21,12 +21,16 @@
 
 	const businessLinks = [
 		{
-			title: 'My Favorite Toys',
-			url: 'https://www.amazon.com/shop/aspentheanimalbaby'
+			title: 'Favorite Treat',
+			url: 'https://amzn.to/3WvD66j'
 		},
 		{
-			title: 'Best Dog Treats',
-			url: 'https://www.amazon.com/shop/aspentheanimalbaby/treats'
+			title: 'Best Ball',
+			url: 'https://amzn.to/4hw8OtO'
+		},
+		{
+			title: 'Delicious Snack',
+			url: 'https://amzn.to/3Wv8QIM'
 		},
 	];
 
@@ -116,20 +120,19 @@
 					</button>
 				</div>
 				<!-- Photo -->
-				<div class="h-80 overflow-hidden">
+				<div class="relative h-140 overflow-hidden">
 					<img
 						src={profile.avatar}
 						alt="Aspen the Dog"
-						class="h-full w-full object-cover object-center"
+						class="absolute w-full object-cover bottom-2"
 					/>
+					<!-- <div class="absolute h-30 bottom-0 left-0 right-0 bg-[linear-gradient(0deg,_var(--color-background-secondary)_10%,_transparent_80%)]"></div> -->
+					<div class="absolute bottom-0 left-0 right-0 px-6 pb-6 pt-16 text-white text-center">
+						<h1 class="mb-1 text-2xl font-bold">{profile.name}</h1>
+						<p class="text-sm">{profile.tagline}</p>
+					</div>
 				</div>
 				<!-- Profile Name and Tagline-->
-				<div
-					class="absolute bottom-0 left-0 right-0 p-6 text-white"
-				>
-					<h1 class="mb-1 text-2xl font-bold">{profile.name}</h1>
-					<p class="text-sm">{profile.tagline}</p>
-				</div>
 			</div>
 			<!-- Social Links -->
 			<div class="flex justify-center gap-2 px-6 pt-6">
