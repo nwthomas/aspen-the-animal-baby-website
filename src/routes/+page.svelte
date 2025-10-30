@@ -102,9 +102,9 @@
 <!-- Page Container -->
 <div class="min-h-screen bg-[var(--color-background-primary)]">
 	<!-- Card Container -->
-	<div class="mx-auto min-h-screen w-full md:max-w-[575px] md:px-4 md:pt-[30px]">
+	<div class="mx-auto w-full md:max-w-[575px] md:px-4 md:pt-[30px]">
 		<div
-			class="flex min-h-screen flex-col bg-[var(--color-background-secondary)] shadow-2xl md:min-h-[calc(100vh-50px)] md:rounded-t-3xl"
+			class="flex flex-col bg-[var(--color-background-secondary)] shadow-2xl md:min-h-[calc(100vh-30px)] md:rounded-t-3xl"
 		>
 			<!-- Top of Card -->
 			<div class="relative">
@@ -115,7 +115,7 @@
 						<div
 							class="rounded-md bg-[var(--color-background-primary)] px-2 py-1 text-sm whitespace-nowrap text-[var(--color-text-secondary)] shadow-md transition-opacity"
 						>
-							Copied to Clipboard
+							Link Copied
 						</div>
 					{/if}
 					<button
