@@ -1,4 +1,5 @@
 <script lang="ts">
+	// This QR code was generated using: https://www.qrcode-monkey.com
 	import qrCode from '$lib/assets/qr-code.png';
 </script>
 
