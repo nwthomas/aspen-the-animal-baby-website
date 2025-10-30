@@ -3,6 +3,12 @@
 build:
 	pnpm build
 
+check:
+	pnpm check
+
+check-watch:
+	pnpm check --watch
+
 format:
 	pnpm format
 
