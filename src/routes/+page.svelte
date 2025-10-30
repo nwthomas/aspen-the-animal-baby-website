@@ -7,12 +7,11 @@
 			url: 'https://instagram.com/aspen.the.animal.baby',
 			icon: 'instagram'
 		},
-		// TODO: Add TikTok back in once the account is created
-		// {
-		// 	name: 'TikTok',
-		// 	url: 'https://tiktok.com/@aspen.the.animal.baby',
-		// 	icon: 'tiktok'
-		// },
+		{
+			name: 'TikTok',
+			url: 'https://www.tiktok.com/@aspen.the.animal.baby',
+			icon: 'tiktok'
+		},
 		{
 			name: 'Email',
 			url: 'mailto:hello@aspentheanimalbaby.com',
@@ -58,7 +57,7 @@
 		},
 		content: {
 			avatar: aspenProfilePicture,
-			footer: 'Made with ❤️ for dog lovers everywhere',
+			footer: 'Made with ❤️ for dogs everywhere',
 			name: '@aspen.the.animal.baby',
 			tagline: 'Adventures 🐕 • Treats 🍖 • Tennis Balls 🎾',
 		},
