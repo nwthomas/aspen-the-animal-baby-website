@@ -57,8 +57,14 @@
 		avatar: aspenProfilePicture,
 	};
 
+	let showTooltip = false;
+
 	function copyToClipboard() {
 		navigator.clipboard.writeText(window.location.href);
+		showTooltip = true;
+		setTimeout(() => {
+			showTooltip = false;
+		}, 2000);
 	}
 </script>
 
@@ -75,7 +81,14 @@
 			<!-- Top of Card -->
 			<div class="relative">
 				<!-- Share Button -->
-				<div class="absolute right-6 top-6 z-10 flex gap-2">
+				<div class="absolute right-6 top-6 z-10 flex items-center gap-2">
+					{#if showTooltip}
+						<div
+							class="px-3 py-2 bg-[var(--color-background-primary)] text-[var(--color-text-secondary)] text-sm rounded-md shadow-lg whitespace-nowrap transition-opacity"
+						>
+							Copied to Clipboard
+						</div>
+					{/if}
 					<button
 						onclick={copyToClipboard}
 						aria-label="Copy link to clipboard"
