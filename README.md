@@ -2,7 +2,7 @@
 
 This repository contains a lightweight website for Aspen the Animal Baby social media profiles for my dog Aspen.
 
-I guess I just really didn't want to pay $15/month for Linktree.
+I really, really didn't want to pay $15/month for Linktree.
 
 ## Example
 
