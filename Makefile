@@ -13,7 +13,7 @@ format:
 	bun run format
 
 install i:
-	bun run install
+	bun install
 
 lint:
 	bun run lint
