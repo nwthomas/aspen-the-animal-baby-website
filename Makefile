@@ -1,25 +1,25 @@
 .PHONY: build format install lint run run-open
 
 build:
-	pnpm build
+	bun run build
 
 check:
-	pnpm check
+	bun run check
 
 check-watch:
-	pnpm check --watch
+	bun run check --watch
 
 format:
-	pnpm format
+	bun run format
 
 install i:
-	pnpm install
+	bun run install
 
 lint:
-	pnpm lint
+	bun run lint
 
 run:
-	pnpm dev
+	bun run dev
 
 run-open:
-	pnpm dev -- --open
+	bun run dev -- --open
