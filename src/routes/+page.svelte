@@ -5,17 +5,17 @@
 
 	const socialLinks = [
 		{
-			name: 'Instagram',
+			name: 'instagram',
 			url: 'https://instagram.com/aspen.the.animal.baby',
 			icon: 'instagram'
 		},
 		{
-			name: 'TikTok',
+			name: 'tiktok',
 			url: 'https://www.tiktok.com/@aspen.the.animal.baby',
 			icon: 'tiktok'
 		},
 		{
-			name: 'Email',
+			name: 'email',
 			url: 'mailto:hello@aspentheanimalbaby.com',
 			icon: 'email'
 		}
@@ -23,49 +23,49 @@
 
 	const affiliateLinks = [
 		{
-			title: 'Best Treats',
+			title: 'best treats',
 			url: 'https://amzn.to/3WvD66j'
 		},
 		{
-			title: 'Delicious Bonez',
+			title: 'delicious bonez',
 			url: 'https://amzn.to/3Wv8QIM'
 		},
 		{
-			title: 'Tasty Biscuit',
+			title: 'tasty biscuit',
 			url: 'https://amzn.to/47OoXYg'
 		},
 		{
-			title: 'Please Peanut Butter',
+			title: 'please peanut butter',
 			url: 'https://amzn.to/4nxzuMm'
 		},
 		{
-			title: 'Good Fetch',
+			title: 'good fetch',
 			url: 'https://amzn.to/47isqhC'
 		},
 		{
-			title: 'Tuff Chewtoy',
+			title: 'tuff chewtoy',
 			url: 'https://amzn.to/3Wve6fv'
 		},
 		{
-			title: 'Perfect Poops',
+			title: 'perfect poops',
 			url: 'https://amzn.to/4hJFrEv'
 		},
 		{
-			title: 'Eww Vitamin',
+			title: 'eww vitamin',
 			url: 'https://amzn.to/4ntfgmE'
 		}
 	];
 
 	const profile = {
 		meta: {
-			description: "Follow Aspen's adventures across all social media platforms",
+			description: 'follow aspens adventures across all social media platforms',
 			title: 'Aspen the Animal Baby | Instagram, Email | Links'
 		},
 		content: {
 			avatar: aspenProfilePicture,
-			footer: 'Made with ❤️ for dogs everywhere',
+			footer: 'made with ❤️ for dogs everywhere',
 			name: '@aspen.the.animal.baby',
-			tagline: 'Adventures 🐕 • Treats 🍖 • Tennis Balls 🎾'
+			tagline: 'adventures 🐕 • treats 🍖 • tennis balls 🎾'
 		}
 	};
 
@@ -115,9 +115,9 @@
 					<!-- Tooltip -->
 					{#if showTooltip}
 						<div
-							class="rounded-md bg-[var(--color-background-primary)] px-2 py-1 text-sm whitespace-nowrap text-[var(--color-text-secondary)] shadow-md transition-opacity"
+							class="rounded-md bg-[var(--color-background-primary)] px-2 py-1 text-sm font-medium whitespace-nowrap text-[var(--color-text-secondary)] shadow-md transition-opacity"
 						>
-							Link Copied
+							link copied
 						</div>
 					{/if}
 					<button
@@ -156,7 +156,7 @@
 			</div>
 
 			<!-- Social Links -->
-			<div class="flex justify-center gap-2 px-6">
+			<div class="flex justify-center px-6">
 				{#each socialLinks as socialLink (socialLink.url)}
 					<a
 						href={socialLink.url}
@@ -208,7 +208,7 @@
 						aria-label={affiliateLink.title}
 					>
 						<div
-							class="flex items-center justify-between border-3 border-solid border-[var(--color-text-primary)] px-5 py-4 transition-all duration-200 hover:opacity-[var(--hover-opacity)]"
+							class="flex items-center justify-between rounded-xl border-3 border-solid border-[var(--color-text-primary)] px-5 py-4 transition-all duration-200 hover:opacity-[var(--hover-opacity)]"
 						>
 							<h3 class="font-medium text-[var(--color-text-primary)] transition-colors">
 								{affiliateLink.title}
